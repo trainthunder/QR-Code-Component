@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'white': '#FFFFFF',
+            'black': '#000000',
+            'grey': '#7D889E',
+            'light-grey': '#D5E1EF',
+            'dark-navy': '#1F314F'
+          },
+          screen: {
+            'mobile': '375px',
+            'desktop': '1440px'
+          },
+        },
+      },
+    }
+  </script>
   <title>Frontend Mentor | QR code component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
 
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<body class="w-screen h-screen flex items-center justify-center bg-light-grey">
+  <div
+    class="w-[320px] h-[497px] bg-white rounded-[20px] flex flex-col items-center gap-[16px] p-[16px] drop-shadow-[0_0px_25px_rgba(0,0,0,0.25)]">
+    <img src="images/image-qr-code.png" alt="" class="w-[288px] h-[288px] rounded-[10px]">
+    <article class="w-[288px] h-[129px] flex flex-col items-center justify-between">
+      <p class="text-[22px] font-bold text-dark-navy text-center leading-7">Improve your front-end skills by
+        building projects</p>
+      <p class="text-[16px] text-grey text-center leading-tight">Scan the QR code to visit Frontend Mentor and take
+        your coding skills
+        to the next level</p>
+    </article>
   </div>
 </body>
+
 </html>
